@@ -1,6 +1,88 @@
-$primary-color: #3b3b3b;
+@import "config";
 
-body{
-    background-color: $primary-color;
-    color: white;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  
+}
+
+body {
+  @include background;
+  background-color: $primary-color;
+  color: white;
+  margin: 0;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+    font-size: 6rem;
+  }
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2em 1em;
+    background: rgba(lighten($color: $primary-color, $amount: 2), 0.5);
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.secondary-text {
+  color: $secondary-color;
+}
+
+main {
+  padding: 4em;
+  height: 100%;
+
+  .icons {
+   
+    width: 50%;
+
+    .icons--img {
+      display: flex;
+      margin-left: 1.5em;
+      list-style: none;
+
+      .icon_align {
+        margin-left: 1em;
+      }
+    }
+  }
+
+  &#Home {
+    overflow: hidden;
+    h1{
+      margin-top: 20vh;
+    }
+  }
+}
+
+
+
+
+
+
+
+@media only screen and (max-width:700px) {
+  h1.lg-heading{
+    font-size:4em;
+  }
 }
