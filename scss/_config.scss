@@ -5,6 +5,10 @@ $home-image: url(../images/avatar.jpg);
 $background-opacity:0.9;
 
 //mixin
+@mixin easeOut() {
+transition: all .7s ease-out;
+}
+
 @mixin background() {
   @if $show-home-image {
     &.bg-img{
