@@ -9,6 +9,7 @@ $background-opacity:0.9;
 transition: all .7s ease-out;
 }
 
+
 @mixin background() {
   @if $show-home-image {
     &.bg-img{
@@ -29,4 +30,15 @@ transition: all .7s ease-out;
     z-index: -1;
     background: rgba($color: $primary-color, $alpha: 0.5);
   }
+}
+
+@mixin flex($flow, $justify, $align, $width, $height, $overflow, $background) {
+  display: flex;
+  flex-flow: $flow;
+  justify-content: $justify;
+  align-items: $align;
+  width: $width;
+  height: $height;
+  overflow: $overflow;
+  background: $background;
 }
