@@ -42,7 +42,7 @@
   height: 100vh;
   visibility: hidden;
   display: flex;
-  opacity: 0.6;
+  opacity: 1;
   visibility: hidden;
 
   &.show {
@@ -50,7 +50,7 @@
   }
 
   &-branding {
-    @include flex(column wrap, center, center, 50%, 100vh, hidden, $primary-color);
+    @include flex(column wrap, center, center, 50%, 100vh, hidden, rgba($primary-color, 0.6));
   }
 
   &-nav {
@@ -61,11 +61,12 @@
       50%,
       100vh,
       hidden,
-      darken($primary-color, 5)
+      rgba($primary-color, 0.8),
     );
   }
   &-nav {
     margin: 0;
+   
     padding: 0;
     list-style: none;
     transform: translate3d(0, -100%, 0);
@@ -79,6 +80,7 @@
   &-branding{
     @include easeOut;
     transform: translate3d(0, 100%, 0);
+    
 
     &.show {
       transform: translate3d(0, 0%, 0);
@@ -88,7 +90,8 @@
       width: 15em;
       height: 15em;
       border-radius: 50%;
-      background: url('../images/avatar.jpg');
+      background: url('../images/cecy.jpg');
+      background-size: cover;
       border: 3px solid $secondary-color;
     }
   }

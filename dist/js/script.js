@@ -3,6 +3,7 @@ var menu = document.querySelector(".menu");
 var menuNav = document.querySelector(".menu-nav");
 var menuBranding = document.querySelector(".menu-branding");
 var navItems = document.querySelectorAll(".nav-item");
+var home = document.querySelector("main");
 
 //set initial menu state
 
@@ -13,6 +14,7 @@ menuBtn.addEventListener("click", toggleMenu);
 function toggleMenu() {
     if (!showMenu) {
         menuBtn.classList.toggle("close");
+        home.classList.toggle("close-home")
         menu.classList.toggle("show");
         menuNav.classList.toggle("show");
         menuBranding.classList.toggle("show");
